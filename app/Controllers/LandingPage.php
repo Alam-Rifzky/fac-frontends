@@ -20,7 +20,7 @@ class LandingPage extends BaseController
 
         // ----- rakit objek $data (sesuai kebutuhan view Anda) -----
         $data = (object) [
-            'judul'        => 'Landing Page',
+            'judul'        => 'Implementor Resmi Training Accurate',
             'modul'        => $modules,
             'reqaccess'    => array_keys($modules),      // contoh: akses apa saja
             'reqdbaccess'  => [],                        // sesuaikan sendiri

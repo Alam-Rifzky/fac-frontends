@@ -354,7 +354,7 @@
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= $data->judul ?></title>
+    <title><?= esc($data->judul ?? 'Judul Default') ?></title>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
@@ -366,11 +366,18 @@
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     >
+    <link rel="icon" type="image/png" sizes="64x64" href="<?= base_url('fac-icon-64x64.pgn') ?>">
+    <link rel="shortcut icon" href="<?= base_url('fac-icon-64x64.png') ?>" type="image/png">
 </head>
 <body>
+
 <?= view('nav/navbar')?>
 <div class="container-fluid p-1 text-white text-center" style="background: #003a75">
     <?= view('fragments/header') ?>
+</div>
+
+<div class="container-fluid p-1 text-white text-center">
+    <?= view('fragments/carousel') ?>
 </div>
 
 
